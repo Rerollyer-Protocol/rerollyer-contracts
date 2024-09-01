@@ -10,7 +10,7 @@ contract RerollyerLST is ERC20, Ownable {
     // Exchange rate of LST to ETH (starts at 1:1)
     uint256 public exchangeRate = 1 ether;
 
-    constructor() ERC20("Relayer LST", "RLST") {}
+    constructor(string memory name, string memory symbol) ERC20(name, symbol) {}
 
     // Function to mint LST tokens in proportion to the deposited ETH
     function mint(address to, uint256 amountETH) external onlyOwner {
